@@ -12,20 +12,25 @@ class DetailViewModel: ObservableObject {
         self.launchID = launchID
     }
     
-    func loadLaunchDetails(forceReload: Bool = false) {
-        guard forceReload || launchID != launch?.id else {
+    func loadLaunchDetails() {
+        guard launchID != launch?.id else {
             return
         }
         
-        let cachePolicy: CachePolicy = forceReload ? .fetchIgnoringCacheData : .returnCacheDataElseFetch
-        
-        Network.shared.apollo.fetch(query: LaunchDetailsQuery(launchId: launchID), cachePolicy: cachePolicy) { [weak self] result in
+        Network.shared.apollo.fetch(query: LaunchDetailsQuery(launchId: launchID), cachePolicy: .returnCacheDataElseFetch) { [weak self] result in
             guard let self = self else {
                 return
             }
             
             switch result {
             case .success(let graphQLResult):
+                
+                if graphQLResult.source == .server {
+                    debugPrint("LaunchDetailsQuery Data for launchID:\(launchID) came from the NETWORK")
+                } else if graphQLResult.source == .cache {
+                    debugPrint("LaunchDetailsQuery Data for launchID:\(launchID) came from the CACHE")
+                }
+                
                 if let launch = graphQLResult.data?.launch {
                     self.launch = launch
                 }

@@ -7,7 +7,7 @@ public class LaunchDetailsQuery: GraphQLQuery {
   public static let operationName: String = "LaunchDetails"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query LaunchDetails($launchId: ID!) { launch(id: $launchId) { __typename id site mission { __typename name missionPatch(size: LARGE) } rocket { __typename name type } isBooked } }"#
+      #"query LaunchDetails($launchId: ID!) { launch(id: $launchId) { __typename id site mission { __typename name missionPatch(size: SMALL) } } }"#
     ))
 
   public var launchId: ID
@@ -42,15 +42,11 @@ public class LaunchDetailsQuery: GraphQLQuery {
         .field("id", RocketReserverAPI.ID.self),
         .field("site", String?.self),
         .field("mission", Mission?.self),
-        .field("rocket", Rocket?.self),
-        .field("isBooked", Bool.self),
       ] }
 
       public var id: RocketReserverAPI.ID { __data["id"] }
       public var site: String? { __data["site"] }
       public var mission: Mission? { __data["mission"] }
-      public var rocket: Rocket? { __data["rocket"] }
-      public var isBooked: Bool { __data["isBooked"] }
 
       /// Launch.Mission
       ///
@@ -63,29 +59,11 @@ public class LaunchDetailsQuery: GraphQLQuery {
         public static var __selections: [ApolloAPI.Selection] { [
           .field("__typename", String.self),
           .field("name", String?.self),
-          .field("missionPatch", String?.self, arguments: ["size": "LARGE"]),
+          .field("missionPatch", String?.self, arguments: ["size": "SMALL"]),
         ] }
 
         public var name: String? { __data["name"] }
         public var missionPatch: String? { __data["missionPatch"] }
-      }
-
-      /// Launch.Rocket
-      ///
-      /// Parent Type: `Rocket`
-      public struct Rocket: RocketReserverAPI.SelectionSet {
-        public let __data: DataDict
-        public init(_dataDict: DataDict) { __data = _dataDict }
-
-        public static var __parentType: any ApolloAPI.ParentType { RocketReserverAPI.Objects.Rocket }
-        public static var __selections: [ApolloAPI.Selection] { [
-          .field("__typename", String.self),
-          .field("name", String?.self),
-          .field("type", String?.self),
-        ] }
-
-        public var name: String? { __data["name"] }
-        public var type: String? { __data["type"] }
       }
     }
   }

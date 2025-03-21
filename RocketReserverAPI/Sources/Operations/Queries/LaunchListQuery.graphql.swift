@@ -7,16 +7,10 @@ public class LaunchListQuery: GraphQLQuery {
   public static let operationName: String = "LaunchList"
   public static let operationDocument: ApolloAPI.OperationDocument = .init(
     definition: .init(
-      #"query LaunchList($cursor: String) { launches(after: $cursor) { __typename cursor hasMore launches { __typename id site mission { __typename name missionPatch(size: SMALL) } } } }"#
+      #"query LaunchList { launches { __typename launches { __typename id site mission { __typename name missionPatch(size: SMALL) } } } }"#
     ))
 
-  public var cursor: GraphQLNullable<String>
-
-  public init(cursor: GraphQLNullable<String>) {
-    self.cursor = cursor
-  }
-
-  public var __variables: Variables? { ["cursor": cursor] }
+  public init() {}
 
   public struct Data: RocketReserverAPI.SelectionSet {
     public let __data: DataDict
@@ -24,7 +18,7 @@ public class LaunchListQuery: GraphQLQuery {
 
     public static var __parentType: any ApolloAPI.ParentType { RocketReserverAPI.Objects.Query }
     public static var __selections: [ApolloAPI.Selection] { [
-      .field("launches", Launches.self, arguments: ["after": .variable("cursor")]),
+      .field("launches", Launches.self),
     ] }
 
     public var launches: Launches { __data["launches"] }
@@ -39,13 +33,9 @@ public class LaunchListQuery: GraphQLQuery {
       public static var __parentType: any ApolloAPI.ParentType { RocketReserverAPI.Objects.LaunchConnection }
       public static var __selections: [ApolloAPI.Selection] { [
         .field("__typename", String.self),
-        .field("cursor", String.self),
-        .field("hasMore", Bool.self),
         .field("launches", [Launch?].self),
       ] }
 
-      public var cursor: String { __data["cursor"] }
-      public var hasMore: Bool { __data["hasMore"] }
       public var launches: [Launch?] { __data["launches"] }
 
       /// Launches.Launch

@@ -7,9 +7,20 @@
 
 import ApolloAPI
 
-public enum SchemaConfiguration: ApolloAPI.SchemaConfiguration {    
+public enum SchemaConfiguration: ApolloAPI.SchemaConfiguration {
     public static func cacheKeyInfo(for type: Object, object: ObjectData) -> CacheKeyInfo? {
-    // Implement this function to configure cache key resolution for your schema types.
-    return nil
-  }
+//        print("DEBUG: Generating cache key for type: \(type)")
+
+        if type.typename == "Launch", let id = object["id"] as? String {
+            let cacheKeyInfo = CacheKeyInfo(
+                id: id,
+                uniqueKeyGroup: type.typename
+            )
+            print("DEBUG: Generated cache key: \(cacheKeyInfo)")
+            return cacheKeyInfo
+        }
+
+        // print("DEBUG: No ID found in object data: \(object)")
+        return nil
+    }
 }

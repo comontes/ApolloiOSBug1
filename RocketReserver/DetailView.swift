@@ -18,11 +18,6 @@ struct DetailView: View {
                                 .font(.system(size: 24, weight: .bold))
                         }
                         
-                        if let rocketName = launch.rocket?.name {
-                            Text("🚀 \(rocketName)")
-                                .font(.system(size: 18))
-                        }
-                        
                         if let launchSite = launch.site {
                             Text(launchSite)
                                 .font(.system(size: 14))
