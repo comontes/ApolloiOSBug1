@@ -5,35 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/apollographql/apollo-ios",
       "state" : {
-        "revision" : "e218b565661b12c3a1e5c0964eac805d44da7c76",
-        "version" : "1.14.0"
-      }
-    },
-    {
-      "identity" : "keychain-swift",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/evgenyneu/keychain-swift",
-      "state" : {
-        "revision" : "d9b76fba09c2eb5c0bb9312092d309c833996cd2",
-        "version" : "18.0.0"
-      }
-    },
-    {
-      "identity" : "sdwebimage",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/SDWebImage.git",
-      "state" : {
-        "revision" : "86e9185ef41c4238a93ad8efe61ddeb701e80bbf",
-        "version" : "5.19.5"
-      }
-    },
-    {
-      "identity" : "sdwebimageswiftui",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/SDWebImage/SDWebImageSwiftUI",
-      "state" : {
-        "revision" : "53573d6dd017e354c0e7d8f1c86b77ef1383c996",
-        "version" : "2.2.7"
+        "revision" : "9aa748d6f0526a744d49d59a2383dc7fdf9d645b",
+        "version" : "1.18.0"
       }
     },
     {

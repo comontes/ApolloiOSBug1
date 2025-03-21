@@ -17,26 +17,16 @@
 		66F96FC729FACE1A00713B80 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FC629FACE1A00713B80 /* DetailView.swift */; };
 		66F96FD129FAD2EC00713B80 /* RocketReserverAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 66F96FD029FAD2EC00713B80 /* RocketReserverAPI */; };
 		66F96FD329FAD3EE00713B80 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FD229FAD3EE00713B80 /* Network.swift */; };
-		66F96FD629FADBB700713B80 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 66F96FD529FADBB700713B80 /* SDWebImageSwiftUI */; };
-		66F96FDA29FADCC800713B80 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 66F96FD929FADCC800713B80 /* KeychainSwift */; };
 		66F96FDC29FAE88E00713B80 /* LaunchListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FDB29FAE88E00713B80 /* LaunchListViewModel.swift */; };
 		66F96FDE29FAEDBF00713B80 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FDD29FAEDBF00713B80 /* DetailViewModel.swift */; };
-		66F96FE029FAFB9600713B80 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FDF29FAFB9600713B80 /* LoginView.swift */; };
-		66F96FE229FB0A9600713B80 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FE129FB0A9600713B80 /* LoginViewModel.swift */; };
-		66F96FE429FC069D00713B80 /* AuthorizationInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FE329FC069D00713B80 /* AuthorizationInterceptor.swift */; };
-		66F96FE629FC070600713B80 /* NetworkInterceptorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FE529FC070600713B80 /* NetworkInterceptorProvider.swift */; };
 		66F96FE829FC0D7700713B80 /* View+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FE729FC0D7700713B80 /* View+Alert.swift */; };
 		66F96FEA29FC183200713B80 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F96FE929FC183200713B80 /* NotificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		66D7A53B2A056886009DDB89 /* schema.graphqls */ = {isa = PBXFileReference; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
-		66D7A53C2A056886009DDB89 /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
 		66D7A53D2A056886009DDB89 /* LaunchDetails.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchDetails.graphql; sourceTree = "<group>"; };
-		66D7A53E2A056886009DDB89 /* BookTrip.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = BookTrip.graphql; sourceTree = "<group>"; };
-		66D7A53F2A056886009DDB89 /* TripsBooked.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = TripsBooked.graphql; sourceTree = "<group>"; };
 		66D7A5402A056886009DDB89 /* LaunchList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchList.graphql; sourceTree = "<group>"; };
-		66D7A5412A056886009DDB89 /* CancelTrip.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CancelTrip.graphql; sourceTree = "<group>"; };
 		66F96F9729FAC0D600713B80 /* RocketReserver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RocketReserver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F96F9A29FAC0D600713B80 /* RocketReserverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketReserverApp.swift; sourceTree = "<group>"; };
 		66F96F9C29FAC0D600713B80 /* LaunchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListView.swift; sourceTree = "<group>"; };
@@ -47,10 +37,6 @@
 		66F96FD229FAD3EE00713B80 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		66F96FDB29FAE88E00713B80 /* LaunchListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchListViewModel.swift; sourceTree = "<group>"; };
 		66F96FDD29FAEDBF00713B80 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
-		66F96FDF29FAFB9600713B80 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		66F96FE129FB0A9600713B80 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		66F96FE329FC069D00713B80 /* AuthorizationInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInterceptor.swift; sourceTree = "<group>"; };
-		66F96FE529FC070600713B80 /* NetworkInterceptorProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInterceptorProvider.swift; sourceTree = "<group>"; };
 		66F96FE729FC0D7700713B80 /* View+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Alert.swift"; sourceTree = "<group>"; };
 		66F96FE929FC183200713B80 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		66F96FEB29FC2BF400713B80 /* RocketReserverAPI */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RocketReserverAPI; sourceTree = "<group>"; };
@@ -61,11 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66F96FD629FADBB700713B80 /* SDWebImageSwiftUI in Frameworks */,
 				66EEA7762A13C4BF00BB8C72 /* Apollo in Frameworks */,
 				66EEA7782A13C4BF00BB8C72 /* ApolloWebSocket in Frameworks */,
 				66F96FD129FAD2EC00713B80 /* RocketReserverAPI in Frameworks */,
-				66F96FDA29FADCC800713B80 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +60,8 @@
 			isa = PBXGroup;
 			children = (
 				66D7A53B2A056886009DDB89 /* schema.graphqls */,
-				66D7A53C2A056886009DDB89 /* Login.graphql */,
 				66D7A53D2A056886009DDB89 /* LaunchDetails.graphql */,
-				66D7A53E2A056886009DDB89 /* BookTrip.graphql */,
-				66D7A53F2A056886009DDB89 /* TripsBooked.graphql */,
 				66D7A5402A056886009DDB89 /* LaunchList.graphql */,
-				66D7A5412A056886009DDB89 /* CancelTrip.graphql */,
 			);
 			path = graphql;
 			sourceTree = "<group>";
@@ -110,15 +90,11 @@
 			children = (
 				66F96F9A29FAC0D600713B80 /* RocketReserverApp.swift */,
 				66F96FD229FAD3EE00713B80 /* Network.swift */,
-				66F96FE329FC069D00713B80 /* AuthorizationInterceptor.swift */,
-				66F96FE529FC070600713B80 /* NetworkInterceptorProvider.swift */,
 				66F96F9C29FAC0D600713B80 /* LaunchListView.swift */,
 				66F96FDB29FAE88E00713B80 /* LaunchListViewModel.swift */,
 				66F96FC429FAC7F200713B80 /* LaunchRow.swift */,
 				66F96FC629FACE1A00713B80 /* DetailView.swift */,
 				66F96FDD29FAEDBF00713B80 /* DetailViewModel.swift */,
-				66F96FDF29FAFB9600713B80 /* LoginView.swift */,
-				66F96FE129FB0A9600713B80 /* LoginViewModel.swift */,
 				66F96FE729FC0D7700713B80 /* View+Alert.swift */,
 				66F96FE929FC183200713B80 /* NotificationView.swift */,
 				66F96F9E29FAC0D700713B80 /* Assets.xcassets */,
@@ -168,8 +144,6 @@
 			name = RocketReserver;
 			packageProductDependencies = (
 				66F96FD029FAD2EC00713B80 /* RocketReserverAPI */,
-				66F96FD529FADBB700713B80 /* SDWebImageSwiftUI */,
-				66F96FD929FADCC800713B80 /* KeychainSwift */,
 				66EEA7752A13C4BF00BB8C72 /* Apollo */,
 				66EEA7772A13C4BF00BB8C72 /* ApolloWebSocket */,
 			);
@@ -185,7 +159,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					66F96F9629FAC0D600713B80 = {
 						CreatedOnToolsVersion = 14.2;
@@ -202,8 +176,6 @@
 			);
 			mainGroup = 66F96F8E29FAC0D600713B80;
 			packageReferences = (
-				66F96FD429FADBB700713B80 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				66F96FD829FADCC800713B80 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				66EEA7742A13C4BF00BB8C72 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 			);
 			productRefGroup = 66F96F9829FAC0D600713B80 /* Products */;
@@ -240,11 +212,7 @@
 				66F96FDC29FAE88E00713B80 /* LaunchListViewModel.swift in Sources */,
 				66F96FE829FC0D7700713B80 /* View+Alert.swift in Sources */,
 				66F96FC529FAC7F200713B80 /* LaunchRow.swift in Sources */,
-				66F96FE029FAFB9600713B80 /* LoginView.swift in Sources */,
-				66F96FE629FC070600713B80 /* NetworkInterceptorProvider.swift in Sources */,
 				66F96F9B29FAC0D600713B80 /* RocketReserverApp.swift in Sources */,
-				66F96FE229FB0A9600713B80 /* LoginViewModel.swift in Sources */,
-				66F96FE429FC069D00713B80 /* AuthorizationInterceptor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,23 +426,7 @@
 			repositoryURL = "https://github.com/apollographql/apollo-ios";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.14.0;
-			};
-		};
-		66F96FD429FADBB700713B80 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
-			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 2.2.0;
-			};
-		};
-		66F96FD829FADCC800713B80 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
-			requirement = {
-				kind = exactVersion;
-				version = 18.0.0;
+				minimumVersion = 1.18.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -493,16 +445,6 @@
 		66F96FD029FAD2EC00713B80 /* RocketReserverAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RocketReserverAPI;
-		};
-		66F96FD529FADBB700713B80 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 66F96FD429FADBB700713B80 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
-		66F96FD929FADCC800713B80 /* KeychainSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 66F96FD829FADCC800713B80 /* XCRemoteSwiftPackageReference "keychain-swift" */;
-			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

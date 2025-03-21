@@ -1,10 +1,7 @@
 import RocketReserverAPI
-import SDWebImageSwiftUI
 import SwiftUI
 
 struct DetailView: View {
-    private let placeholderImg = Image("placeholder")
-    
     @StateObject private var viewModel: DetailViewModel
     
     init(launchID: RocketReserverAPI.ID) {
@@ -15,20 +12,6 @@ struct DetailView: View {
         VStack {
             if let launch = viewModel.launch {
                 HStack(spacing: 10) {
-                    if let missionPatch = launch.mission?.missionPatch {
-                        WebImage(url: URL(string: missionPatch))
-                            .resizable()
-                            .placeholder(placeholderImg)
-                            .indicator(.activity)
-                            .scaledToFit()
-                            .frame(width: 165, height: 165)
-                    } else {
-                        placeholderImg
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 165, height: 165)
-                    }
-                    
                     VStack(alignment: .leading, spacing: 4) {
                         if let missionName = launch.mission?.name {
                             Text(missionName)
@@ -48,12 +31,6 @@ struct DetailView: View {
                     
                     Spacer()
                 }
-                
-                if launch.isBooked {
-                    cancelTripButton()
-                } else {
-                    bookTripButton()
-                }
             }
             Spacer()
         }
@@ -63,32 +40,8 @@ struct DetailView: View {
         .task {
             viewModel.loadLaunchDetails()
         }
-        .sheet(isPresented: $viewModel.isShowingLogin) {
-            LoginView(isPresented: $viewModel.isShowingLogin)
-        }
         .appAlert($viewModel.appAlert)
     }
-    
-    private func bookTripButton() -> some View {
-        Button(action: viewModel.bookOrCancel) {
-            Text("Book now!")
-                .foregroundColor(.black)
-        }
-        .frame(width: 200, height: 50)
-        .background(.green)
-        .cornerRadius(8)
-    }
-    
-    private func cancelTripButton() -> some View {
-        Button(action: viewModel.bookOrCancel) {
-            Text("Cancel trip")
-                .foregroundColor(.black)
-        }
-        .frame(width: 200, height: 50)
-        .background(.red)
-        .cornerRadius(8)
-    }
-    
 }
 
 struct DetailView_Previews: PreviewProvider {
