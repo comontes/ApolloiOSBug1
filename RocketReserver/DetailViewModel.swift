@@ -18,7 +18,7 @@ class DetailViewModel: ObservableObject {
         }
         
         Network.shared.apollo
-            .fetch(query: LaunchDetailsQuery(launchId: launchID), cachePolicy: .returnCacheDataDontFetch) { [weak self] result in
+            .fetch(query: LaunchDetailsQuery(launchId: launchID), cachePolicy: .returnCacheDataElseFetch) { [weak self] result in
                 guard let self = self else {
                     return
                 }

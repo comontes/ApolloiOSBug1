@@ -9,8 +9,6 @@ import ApolloAPI
 
 public enum SchemaConfiguration: ApolloAPI.SchemaConfiguration {
     public static func cacheKeyInfo(for type: Object, object: ObjectData) -> CacheKeyInfo? {
-//        print("DEBUG: Generating cache key for type: \(type)")
-
         if type.typename == "Launch", let id = object["id"] as? String {
             let cacheKeyInfo = CacheKeyInfo(
                 id: id,
@@ -20,7 +18,6 @@ public enum SchemaConfiguration: ApolloAPI.SchemaConfiguration {
             return cacheKeyInfo
         }
 
-        // print("DEBUG: No ID found in object data: \(object)")
         return nil
     }
 }
