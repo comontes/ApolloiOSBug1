@@ -17,30 +17,31 @@ class DetailViewModel: ObservableObject {
             return
         }
         
-        Network.shared.apollo.fetch(query: LaunchDetailsQuery(launchId: launchID), cachePolicy: .returnCacheDataElseFetch) { [weak self] result in
-            guard let self = self else {
-                return
-            }
+        Network.shared.apollo
+            .fetch(query: LaunchDetailsQuery(launchId: launchID), cachePolicy: .returnCacheDataDontFetch) { [weak self] result in
+                guard let self = self else {
+                    return
+                }
             
-            switch result {
-            case .success(let graphQLResult):
+                switch result {
+                case .success(let graphQLResult):
                 
-                if graphQLResult.source == .server {
-                    debugPrint("LaunchDetailsQuery Data for launchID:\(launchID) came from the NETWORK")
-                } else if graphQLResult.source == .cache {
-                    debugPrint("LaunchDetailsQuery Data for launchID:\(launchID) came from the CACHE")
-                }
+                    if graphQLResult.source == .server {
+                        debugPrint("LaunchDetailsQuery Data for launchID:\(launchID) came from the NETWORK")
+                    } else if graphQLResult.source == .cache {
+                        debugPrint("LaunchDetailsQuery Data for launchID:\(launchID) came from the CACHE")
+                    }
                 
-                if let launch = graphQLResult.data?.launch {
-                    self.launch = launch
-                }
+                    if let launch = graphQLResult.data?.launch {
+                        self.launch = launch
+                    }
                 
-                if let errors = graphQLResult.errors {
-                    self.appAlert = .errors(errors: errors)
+                    if let errors = graphQLResult.errors {
+                        self.appAlert = .errors(errors: errors)
+                    }
+                case .failure(let error):
+                    self.appAlert = .errors(errors: [error])
                 }
-            case .failure(let error):
-                self.appAlert = .errors(errors: [error])
             }
-        }
     }
 }
